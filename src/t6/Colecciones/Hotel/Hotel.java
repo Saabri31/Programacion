@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package t6.RepasoExamen;
+package t6.Colecciones.Hotel;
 
-import t6.RepasoExamen.Zonas;
+import t6.Colecciones.Hotel.Zonas;
 
 /**
  *
