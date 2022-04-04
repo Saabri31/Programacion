@@ -1,4 +1,4 @@
-package Proyecto2;
+package Practicas.Proyecto2;
 
 
 import java.util.ArrayList;

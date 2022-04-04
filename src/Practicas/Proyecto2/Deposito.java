@@ -1,4 +1,4 @@
-package Proyecto2;
+package Practicas.Proyecto2;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
