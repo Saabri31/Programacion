@@ -48,8 +48,7 @@ public class Ejercicio2 {
             if (file.isFile()) {
                 System.out.println(arbol + file.getName());
             } else if (file.isDirectory()) {
-                arbol += arbol;
-                System.out.println(file.getName() + arbol);
+                System.out.println(file.getName() + "|----------");
                 tree(file);
                 
             }

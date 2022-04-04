@@ -20,7 +20,7 @@ public class EjemploSelector3 {
 
         JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
         jfc.setDialogTitle("Elige");
-        jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        jfc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
         jfc.setMultiSelectionEnabled(true);
 
         int resp = jfc.showOpenDialog(null);
