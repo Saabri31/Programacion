@@ -1,6 +1,5 @@
 package Practicas.Proyecto2;
 
-
 import java.util.Scanner;
 
 /*
@@ -27,6 +26,8 @@ public class Terminal {
         int idParking = 0;
         String dinero = "";
         int opcion = 0;
+        Ubicacion ubi = new Ubicacion();
+        Ticket ticket = new Ticket("1234-ABC", ubi);
 
         do {
             do {
@@ -40,7 +41,7 @@ public class Terminal {
             switch (opcion) {
                 case 1:
                     System.out.println("Estacionar");
-//                ubicacion.getPlano();
+                    ubi.getPlano();
                     do {
                         System.out.println("Verificando matricula...");
                         matricula = sc.nextLine();
@@ -52,8 +53,8 @@ public class Terminal {
                     } while (!Funciones.validarMatricula(matricula));
 
                     System.out.println("Generando ticket...");
-//                  ticket.toString
-//                  ubicacion.getPlano();
+                  ticket.toString();
+                  ubi.getPlano();
 
                     break;
                 case 2:

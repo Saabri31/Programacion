@@ -1,6 +1,5 @@
 package Practicas.Proyecto2;
 
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -17,14 +16,14 @@ public class Ticket {
     private int id = 0;
     private String matricula;
     private LocalDateTime fechaHora;
-    private Ubicacion sitio;
+    private Ubicacion ubicacion;
     public static int count;
 
-    public Ticket(String matricula, Ubicacion sitio) {
+    public Ticket(String matricula, Ubicacion ubicacion) {
         this.id = ++count;
         this.matricula = matricula;
         this.fechaHora = LocalDateTime.now();
-        this.sitio = sitio;
+        this.ubicacion = ubicacion;
     }
 
     public int getId() {
@@ -43,14 +42,14 @@ public class Ticket {
         return fechaHora;
     }
 
-    public Ubicacion getSitio() {
-        return sitio;
+    public Ubicacion getUbicacion() {
+        return ubicacion;
     }
 
     @Override
     public String toString() {
         return "Ticket{" + "id = " + id + ", Matricula = " + matricula
                 + ", fechaHora = " + Funciones.formatearFechaHora(fechaHora)
-                + ", sitio= " + sitio + '}';
+                + ", ubicacion= " + ubicacion + '}';
     }
 }

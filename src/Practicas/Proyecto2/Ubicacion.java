@@ -4,14 +4,13 @@ package Practicas.Proyecto2;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 /**
  *
  * @author Sabri
  */
 public class Ubicacion {
 
-    private int[][] plano = new int[3][20];
+    private final int[][] plano = new int[3][20];
 
     public Ubicacion() {
         for (int i = 0; i < plano.length; i++) {
