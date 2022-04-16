@@ -50,6 +50,6 @@ public class Ticket {
     public String toString() {
         return "Ticket{" + "id = " + id + ", Matricula = " + matricula
                 + ", fechaHora = " + Funciones.formatearFechaHora(fechaHora)
-                + ", ubicacion= " + ubicacion + '}';
+                + ", ubicacion: sitio " + (ubicacion.getPiso(id) + 1) + ", plaza " + (ubicacion.getPlaza(id) + 1) + '}';
     }
 }

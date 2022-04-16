@@ -1,5 +1,7 @@
 package Practicas.Proyecto2;
 
+import java.math.RoundingMode;
+import java.text.NumberFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -69,8 +71,13 @@ public class Funciones {
 
     }
 
-    public static boolean mismaMatricula(List<Ticket> ticket, String matricula) {
-        return true;
+    public static double formatearMinutos(double minutos) {
+        NumberFormat nf = NumberFormat.getNumberInstance();
+        nf.setMaximumFractionDigits(0);
+        nf.setRoundingMode(RoundingMode.FLOOR);
+        String min = nf.format(minutos);
+        double tiempo = Double.valueOf(min);
+        return tiempo;
     }
 
 }

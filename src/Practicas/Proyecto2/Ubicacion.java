@@ -30,13 +30,13 @@ public class Ubicacion {
         System.out.println();
     }
 
-    public static int getPiso(int[][] sitio, int id) {
+    public static int getPiso(int id) {
 
         int fila = 0;
 
-        for (int i = 0; i < sitio.length; i++) {
-            for (int j = 0; j < sitio[0].length; j++) {
-                if (sitio[i][j] == id) {
+        for (int i = 0; i < plano.length; i++) {
+            for (int j = 0; j < plano[0].length; j++) {
+                if (plano[i][j] == id) {
                     fila = i;
                 }
             }
@@ -44,13 +44,13 @@ public class Ubicacion {
         return fila;
     }
 
-    public static int getPlaza(int[][] sitio, int id) {
+    public static int getPlaza(int id) {
 
         int columna = 0;
 
-        for (int i = 0; i < sitio.length; i++) {
-            for (int j = 0; j < sitio[0].length; j++) {
-                if (sitio[i][j] == id) {
+        for (int i = 0; i < plano.length; i++) {
+            for (int j = 0; j < plano[0].length; j++) {
+                if (plano[i][j] == id) {
                     columna = j;
                 }
             }
@@ -81,6 +81,16 @@ public class Ubicacion {
             }
         }
         return true;
+    }
+
+    public static void sacarCoche(int id) {
+        for (int i = 0; i < plano.length; i++) {
+            for (int j = 0; j < plano[0].length; j++) {
+                if (plano[i][j] == id) {
+                    plano[i][j] = 0;
+                }
+            }
+        }
     }
 
 }

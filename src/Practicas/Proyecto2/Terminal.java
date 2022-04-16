@@ -12,6 +12,13 @@ import java.util.Scanner;
  */
 public class Terminal {
 
+    private Maquina maquina;
+
+    public Terminal(Maquina maquina) {
+        this.maquina = maquina;
+
+    }
+
     public static void interfaz() {
         System.out.println("PARKING BLUE-ZONE");
         System.out.println("1. Estacionar vehiculo");
@@ -53,8 +60,8 @@ public class Terminal {
                     } while (!Funciones.validarMatricula(matricula));
 
                     System.out.println("Generando ticket...");
-                  ticket.toString();
-                  ubi.getPlano();
+                    ticket.toString();
+                    ubi.getPlano();
 
                     break;
                 case 2:

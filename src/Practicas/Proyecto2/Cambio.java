@@ -56,23 +56,22 @@ public class Cambio {
 
     public static void estacionarVehiculo(Ubicacion ubicacion) {
 
-        Ticket ticket1 = new Ticket("aaa", ubicacion);
-
-        String matricula = "";
-
-        ubicacion.getPlano();
-
-        System.out.println("Verificando matricula...");
-        System.out.println();
-        matricula = sc.nextLine();
-        do {
-            System.out.println("Verificando matricula...");
-            matricula = sc.nextLine();
-            if (!Funciones.validarMatricula(matricula) || !Funciones.mismaMatricula(ticket, matricula)) {
-                System.out.println("Matricula invalida");
-            }
-        } while (!Funciones.validarMatricula(matricula) && !Funciones.mismaMatricula(ticket, matricula));
-
+//        Ticket ticket1 = new Ticket("aaa", ubicacion);
+//
+//        String matricula = "";
+//
+//        ubicacion.getPlano();
+//
+//        System.out.println("Verificando matricula...");
+//        System.out.println();
+//        matricula = sc.nextLine();
+//        do {
+//            System.out.println("Verificando matricula...");
+//            matricula = sc.nextLine();
+//            if (!Funciones.validarMatricula(matricula) || !Funciones.mismaMatricula(ticket, matricula)) {
+//                System.out.println("Matricula invalida");
+//            }
+//        } while (!Funciones.validarMatricula(matricula) && !Funciones.mismaMatricula(ticket, matricula));
     }
 
     public static void sacarVehiculo() {
