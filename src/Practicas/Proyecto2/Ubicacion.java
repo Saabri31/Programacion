@@ -10,7 +10,7 @@ package Practicas.Proyecto2;
  */
 public class Ubicacion {
 
-    private final int[][] plano = new int[3][20];
+    private static final int[][] plano = new int[3][20];
 
     public Ubicacion() {
         for (int i = 0; i < plano.length; i++) {
@@ -27,6 +27,7 @@ public class Ubicacion {
             }
             System.out.println();
         }
+        System.out.println();
     }
 
     public static int getPiso(int[][] sitio, int id) {
@@ -56,4 +57,30 @@ public class Ubicacion {
         }
         return columna;
     }
+
+    public static void colocarCoche(Ticket ticket) {
+        parar:
+        {
+            for (int i = 0; i < plano.length; i++) {
+                for (int j = 0; j < plano[0].length; j++) {
+                    if (plano[i][j] == 0) {
+                        plano[i][j] = ticket.getId();
+                        break parar;
+                    }
+                }
+            }
+        }
+    }
+
+    public static boolean parkingLleno() {
+        for (int i = 0; i < plano.length; i++) {
+            for (int j = 0; j < plano[0].length; j++) {
+                if (plano[i][j] == 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
 }

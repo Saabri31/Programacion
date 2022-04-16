@@ -1,6 +1,5 @@
 package Practicas.Proyecto2;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -9,13 +8,12 @@ import java.util.Scanner;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 /**
  *
  * @author Sabri
  */
 public class Cambio {
-    
+
     public static Scanner sc = new Scanner(System.in);
 
     public static List<Ticket> ticket = new ArrayList<>();
@@ -31,23 +29,22 @@ public class Cambio {
             Thread.sleep(100);
             interfaz();
             opcion = sc.nextInt();
-            
-            } while (opcion != 1 && opcion != 2);
-            switch (opcion) {
-                case 1:
-                    System.out.println("Estacionar");
-                    estacionarVehiculo(ubicacion);
 
-                    break;
-                case 2:
-                    System.out.println("Sacar");
+        } while (opcion != 1 && opcion != 2);
+        switch (opcion) {
+            case 1:
+                System.out.println("Estacionar");
+                estacionarVehiculo(ubicacion);
+
+                break;
+            case 2:
+                System.out.println("Sacar");
 //                sacarVehiculo();
-                    break;
-                default:
-                    System.err.println("Opcion desconocida");
-            }
-        
-        
+                break;
+            default:
+                System.err.println("Opcion desconocida");
+        }
+
     }
 
     public static void interfaz() {
@@ -81,5 +78,5 @@ public class Cambio {
     public static void sacarVehiculo() {
 
     }
-    
+
 }

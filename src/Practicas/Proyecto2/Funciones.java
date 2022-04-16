@@ -1,6 +1,5 @@
 package Practicas.Proyecto2;
 
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
