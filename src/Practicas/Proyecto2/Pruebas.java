@@ -4,8 +4,6 @@
  */
 package Practicas.Proyecto2;
 
-import java.math.RoundingMode;
-import java.text.NumberFormat;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Scanner;

@@ -4,7 +4,6 @@ import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -16,6 +15,7 @@ import java.util.List;
  */
 public class Funciones {
 
+    //Comprueba que la cadena no contenga simbolos
     public static boolean contieneSimbolos(String cadena) {
 
         for (int i = 0; i < cadena.length(); i++) {
@@ -28,6 +28,7 @@ public class Funciones {
         return false;
     }
 
+    //Comprueba que la cadena sea numerica
     public static boolean sonDigitos(String cadena) {
 
         for (int i = 0; i < cadena.length(); i++) {
@@ -40,37 +41,16 @@ public class Funciones {
         return true;
     }
 
-    public static boolean validarMatricula(String matricula) {
-
-        if (matricula.contains("-")) {
-            String[] array = matricula.split("-");
-
-            String numeros = array[0];
-            String letras = array[1];
-
-            if (numeros.length() != 4 || !sonDigitos(numeros)) {
-                return false;
-            }
-            if (letras.length() != 3 || sonDigitos(letras) || contieneSimbolos(letras)) {
-                return false;
-            }
-        } else {
-            return false;
-        }
-
-        return true;
-    }
-
+    //Formatea la fecha y hora
     public static String formatearFechaHora(LocalDateTime fechaHora) {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm:ss");
-
         String formatDateTime = fechaHora.format(formatter);
-
         return formatDateTime;
 
     }
 
+    //Formatea los minutos para que no salgan con decimales
     public static double formatearMinutos(double minutos) {
         NumberFormat nf = NumberFormat.getNumberInstance();
         nf.setMaximumFractionDigits(0);

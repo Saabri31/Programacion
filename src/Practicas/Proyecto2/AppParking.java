@@ -17,6 +17,5 @@ public class AppParking {
     public static void main(String[] args) {
         maquina = new Maquina();
         terminal = new Terminal(maquina);
-
     }
 }

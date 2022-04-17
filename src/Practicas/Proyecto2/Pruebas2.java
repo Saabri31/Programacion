@@ -138,7 +138,6 @@ public class Pruebas2 {
         System.out.println(ticket1.toString());
         System.out.println(ticket5.toString());
         System.out.println(ticket60.toString());
-        Ubicacion.sacarCoche(ticket3.getId());
         ubi.getPlano();
         Ticket ticket61 = new Ticket("1234-ABC", ubi);
         Ubicacion.colocarCoche(ticket61);
