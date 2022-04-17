@@ -12,23 +12,48 @@ import java.util.Scanner;
  */
 public class Terminal {
 
+    public static Scanner sc = new Scanner(System.in);
+
     private Maquina maquina;
 
     public Terminal(Maquina maquina) {
         this.maquina = maquina;
-
+        interfaz();
     }
 
     public static void interfaz() {
+        int opcion = 0;
         System.out.println("PARKING BLUE-ZONE");
         System.out.println("1. Estacionar vehiculo");
         System.out.println("2. Sacar vehiculo");
         System.out.print("Pulse boton: ");
+        opcion = sc.nextInt();
+        switch (opcion) {
+            case 1:
+                estacionarVehiculo();
+                break;
+            case 2:
+                Ubicacion.sacarCoche(opcion);
+        }
+    }
+
+    public static void estacionarVehiculo() {
+
+        String matricula = "";
+        System.out.println("Verificando matricula...");
+        System.out.println();
+        matricula = sc.nextLine();
+//        do {
+//            System.out.println("Verificando matricula...");
+//            matricula = sc.nextLine();
+//            if (!Funciones.validarMatricula(matricula) || !Funciones.mismaMatricula(ticket, matricula)) {
+//                System.out.println("Matricula invalida");
+//            }
+//        } while (!Funciones.validarMatricula(matricula) && !Funciones.mismaMatricula(ticket, matricula));
     }
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
         String matricula = "";
         int idParking = 0;
         String dinero = "";
