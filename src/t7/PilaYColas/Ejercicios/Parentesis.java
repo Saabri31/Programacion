@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package PilaYColas.Ejercicios;
+package t7.PilaYColas.Ejercicios;
 
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -23,12 +23,16 @@ public class Parentesis {
             char parentesis = s.charAt(i);
             if (parentesis == '(') {
                 pila.push(parentesis);
-            } else if (parentesis == ')') {
-                if (pila.isEmpty())
+            }
+            if (parentesis == ')') {
+                if (pila.isEmpty()) {
                     return false;
+                }
+            } else {
+                pila.pop();
             }
         }
-        return false;
+        return true;
     }
 
     public static void main(String[] args) {
@@ -37,7 +41,7 @@ public class Parentesis {
 
         System.out.println("Introduce una cadena de parentesis");
         String cadena = sc.nextLine();
-        comprobarParentesis(cadena);
+        System.out.println(comprobarParentesis(cadena));
 
     }
 }
