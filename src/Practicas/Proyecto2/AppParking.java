@@ -12,7 +12,6 @@ public class AppParking {
 
     public static Maquina maquina;
     public static Terminal terminal;
-    public static Ubicacion plano;
 
     public static void main(String[] args) {
         maquina = new Maquina();

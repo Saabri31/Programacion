@@ -4,9 +4,19 @@
  */
 package t7.PilaYColas.Ejemplos;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 /**
  *
@@ -34,12 +44,14 @@ public class EjemploPila {
         while (!pila.isEmpty()) {
             semana[i] = pila.pop();
             i++;
+            System.out.println(pila);
         }
 
         //mostrar estado de la pila
         System.out.println(pila);
         //mostrar array
         System.out.println(Arrays.toString(semana));
+
     }
 
 }

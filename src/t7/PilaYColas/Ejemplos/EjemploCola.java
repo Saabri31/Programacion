@@ -37,6 +37,7 @@ public class EjemploCola {
         //atendemos la cola de impresion
         while (!cola.isEmpty()) {
             System.out.println("Imprimiendo..." + cola.removeFirst());
+            System.out.println(cola);
         }
         System.out.println("Ningun archivo en la cola");
 
