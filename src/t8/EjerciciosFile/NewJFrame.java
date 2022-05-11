@@ -23,7 +23,7 @@ public class NewJFrame extends javax.swing.JFrame {
     public NewJFrame() {
         initComponents();
         Timer timer = new Timer();
-        long delay = 3000;
+        long delay = 300;
         long wait = 10;
         progresion.setMaximum(255);
         timer.scheduleAtFixedRate(new TimerTask() {
@@ -37,13 +37,14 @@ public class NewJFrame extends javax.swing.JFrame {
     private boolean inc = true;
 
     private void increment() {
-        if (progresion.getValue() >= progresion.getMaximum())
+        if (progresion.getValue() >= progresion.getMaximum()) {
             inc = false;
-        else if (progresion.getValue() <= progresion.getMinimum())
+        } else if (progresion.getValue() <= progresion.getMinimum()) {
             inc = true;
+        }
 
         progresion.setValue(progresion.getValue() + (inc ? 1 : -1));
-        UIManager.put("nimbusOrange", new Color(progresion.getValue(), progresion.getValue() / 2, 145));
+        UIManager.put("nimbusOrange", new Color(progresion.getValue(), progresion.getValue() / 2, progresion.getValue() / 2));
     }
 
     /**
@@ -62,21 +63,20 @@ public class NewJFrame extends javax.swing.JFrame {
         progresion.setBackground(new java.awt.Color(85, 85, 255));
         progresion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         progresion.setForeground(new java.awt.Color(0, 0, 0));
-        progresion.setOrientation(1);
         progresion.setStringPainted(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(progresion, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(progresion, javax.swing.GroupLayout.DEFAULT_SIZE, 721, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(progresion, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(progresion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
