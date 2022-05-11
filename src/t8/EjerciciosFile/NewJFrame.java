@@ -4,10 +4,12 @@
  */
 package t8.EjerciciosFile;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.util.Timer;
 import java.util.TimerTask;
 import javax.swing.JFrame;
+import javax.swing.UIManager;
 
 /**
  *
@@ -23,23 +25,25 @@ public class NewJFrame extends javax.swing.JFrame {
         Timer timer = new Timer();
         long delay = 3000;
         long wait = 10;
+        progresion.setMaximum(255);
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
                 increment();
             }
-            
-        },delay,wait);
+
+        }, delay, wait);
     }
     private boolean inc = true;
-    
+
     private void increment() {
         if (progresion.getValue() >= progresion.getMaximum())
             inc = false;
         else if (progresion.getValue() <= progresion.getMinimum())
             inc = true;
-        
+
         progresion.setValue(progresion.getValue() + (inc ? 1 : -1));
+        UIManager.put("nimbusOrange", new Color(progresion.getValue(), progresion.getValue() / 2, 145));
     }
 
     /**
@@ -55,7 +59,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        progresion.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        progresion.setBackground(new java.awt.Color(85, 85, 255));
+        progresion.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        progresion.setForeground(new java.awt.Color(0, 0, 0));
         progresion.setOrientation(1);
         progresion.setStringPainted(true);
 
