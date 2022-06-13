@@ -33,7 +33,7 @@ public class EscrituraBytes {
         try {
             fos = new FileOutputStream(file, true);
             bos = new BufferedOutputStream(fos);
-            dos = new DataOutputStream(fos);
+            dos = new DataOutputStream(bos);
 
             for (int i = 0; i <= 20; i++) {
                 dos.writeDouble(10 * rnd.nextDouble());
